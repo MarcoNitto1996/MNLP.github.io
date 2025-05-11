@@ -1,0 +1,79 @@
+
+.homepage{
+    background-color: black;
+}
+
+.bgb{
+    background-color: #112b4b !important;
+}
+
+/* Contenitore delle Card */
+.card-container {
+    display: flex;
+    justify-content: space-around; /* Distribuisce le card orizzontalmente */
+    gap: 20px; /* Spazio tra le card */
+    flex-wrap: wrap; /* Le card andranno a capo su schermi piccoli */
+    padding: 20px;
+}
+
+.header-img{
+    background-size: contain; /* L'immagine si adatta sempre interamente */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Non ripete l'immagine */
+}
+
+.bg-grey{
+    background-color: rgb(18, 18, 18);
+}
+
+hr{
+    width: 1200px;
+}
+
+
+@media(min-width: 1200px){
+    section{
+        height: 100vh;
+        
+        scroll-snap-align: start;
+    }
+    
+    section:not(:first-of-type) {
+        place-items: center;
+            display: grid;
+      }
+    
+    html{
+        scroll-snap-type: y mandatory;
+    }
+
+    iframe{
+        width: 100% !important;
+        height: 130% !important;
+        margin-top: -15%;
+        border-radius: 0% !important;
+        padding-bottom: 5%;
+        /* position: absolute; */
+     }
+
+     .bit-top{
+        margin-top: -5%;
+        margin-bottom: 5%;
+     }
+}
+
+
+
+/* Gestione responsive */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Disposizione verticale su schermi piccoli */
+        align-items: center; /* Centra le card */
+    }
+}
+
+@media (min-width: 769px) {
+    .header-component {
+        background-size: cover;
+    }
+}

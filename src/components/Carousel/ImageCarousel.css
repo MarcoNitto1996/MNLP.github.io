@@ -1,0 +1,115 @@
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 3%;
+}
+
+.carousel-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 90vw;
+}
+
+.carousel-main-image {
+    width: 90vw;
+    max-width: 1200px;
+    height: 60vh;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: opacity 0.4s ease-in-out, transform 0.5s ease; /* Aggiunta transizione per opacità e movimento */
+}
+
+.carousel-main-image.transition {
+    opacity: 0.1; /* Effetto dissolvenza per la transizione */
+}
+
+.carousel-button {
+    padding: 8px 16px;
+    background-color: #112b4b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1;
+    margin: 0 10px;
+}
+
+.carousel-button:hover {
+    background-color: #0056b3;
+}
+
+/* Thumbnail Section */
+.carousel-thumbnails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 90vw;
+    max-width: 1200px;
+    overflow: hidden; /* Nasconde le miniature in eccesso */
+}
+
+.thumbnail-container {
+    display: flex;
+    transition: transform 0.5s ease; /* Transizione smooth per lo scorrimento delle miniature */
+}
+
+.carousel-thumbnail {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: border 0.3s ease, transform 0.3s ease; /* Aggiunta della transizione per trasformazioni */
+}
+
+.carousel-thumbnail.active {
+    border: 2px solid #007bff;
+    transform: scale(1.1); /* Aumenta leggermente la miniatura attiva */
+}
+
+.carousel-thumbnail:hover {
+    border: 2px solid #0056b3;
+}
+
+/* Responsiveness for tablets and smartphones */
+@media (max-width: 768px) {
+    .carousel-main-image {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .carousel-thumbnail {
+        width: 60px; /* Riduce la dimensione della miniatura per gli schermi piccoli */
+        height: 40px;
+        margin: 0 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-main-image {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .carousel-thumbnail {
+        width: 50px;
+        height: 35px;
+        margin: 0 2px;
+    }
+
+    .carousel-button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+        margin: 0 5px;
+    }
+}

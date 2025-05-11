@@ -1,0 +1,54 @@
+/* Stile base del bottone */
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 80px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    line-height: 30px; /* Allinea verticalmente il testo */
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Bottone visibile */
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Riporta il bottone nella posizione originale */
+}
+
+/* Hover sul bottone */
+.scroll-to-top:hover {
+    background-color: white;
+    color: #112B4B !important;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 15px;
+        right: 15px;
+        font-size: 20px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top {
+        line-height: 10px; /* Allinea verticalmente il testo */
+        bottom: 30px;
+        right: 30px;
+        font-size: 32px;
+       
+    }
+}

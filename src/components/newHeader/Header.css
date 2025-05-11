@@ -1,0 +1,172 @@
+/* Stile base del contenitore */
+.header-component {
+
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Occupa l'intera altezza della finestra */
+    background-size: contain; /* L'immagine si adatta sempre interamente */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Non ripete l'immagine */
+    position: relative;
+    color: white; /* Colore del testo */
+    text-align: center;
+    /* overflow: hidden; */ /* Evita eventuali elementi fuoriusciti */
+}
+
+.header-note{
+    height: 30%;
+}
+
+/* Sovrapposizione per migliorare leggibilità */
+.header-component::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Contenuto del header */
+.header-content {
+    height: auto;
+    position: relative;
+    z-index: 2; /* Si posiziona sopra la sovrapposizione */
+    max-width: 800px;
+    padding: 20px;
+    position: relative;
+    right: 20%;
+}
+
+/* Titolo */
+.header-title {
+    font-size: 200%;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Sottotitolo */
+.header-subtitle {
+    font-size: 140%;
+    margin: 20px 0;
+}
+
+/* Bottone */
+.header-button {
+    margin-left: -30%;
+    background-color: #112b4b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #003d80;
+}
+
+.rota{
+    color:white !important;
+    margin-left: -4%;
+}
+
+.ml{
+    margin-left: -5%;
+}
+
+
+
+/* Stile responsivo */
+@media (max-width: 768px) {
+
+    .header-component{
+        margin-top: -50%;
+        margin-bottom: -70%;
+    }
+
+    .header-content{
+        right: 0%;
+    }
+
+    .header-title {
+        font-size: 90%;
+        margin-left: 20%;
+    }
+
+    .header-subtitle {
+        font-size:90%;
+        margin-left: 20%;
+    }
+
+    .header-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        margin-left: 20%;   /* centra il tasto quando la dimensione è più o meno quella di un tablet, comportamento atteso? */
+    }
+}
+
+/* Stile responsivo */
+@media (max-width: 1000px) {
+
+    .header-component{
+        margin-top: -16%;
+        margin-bottom: -10%;
+    }
+
+    .header-content{
+        bottom: -10%;
+        right: 20%;
+    }
+
+    .header-title {
+        font-size: 90%;
+    }
+
+    .header-subtitle {
+        font-size: 90%;
+    }
+
+    .header-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    .header-component {
+        background-size: cover;
+    }
+
+    .header-title {
+        margin-left: 3.5%;
+    }
+
+    .header-subtitle {
+        margin-left: 3.5%;
+    }
+
+    .header-button {
+        margin-left: 3.5%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header-subtitle {
+        margin-left: 3.5%;
+    }
+
+    .header-button {
+        margin-left: 3.5%;
+    }
+
+    .rota{
+        margin-left: -11%;
+    }
+}

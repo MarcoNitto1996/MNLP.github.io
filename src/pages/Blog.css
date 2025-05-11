@@ -1,0 +1,38 @@
+.pagina{
+
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+
+
+
+   @media(min-width: 1000px){
+
+    .main-padded{
+        padding: 0 21% !important;
+       }
+
+    .m{
+        margin-left: -30%;
+        margin-right: 30%;
+    }
+
+    .text{
+        font-size: 25px;
+    }
+
+ }
+
+ @media(max-width: 480px){
+    .text{
+        margin-left: 5%;
+    }
+    .col-12 {
+        text-align: center;
+        align-items: center;
+    }
+
+ }

@@ -1,0 +1,41 @@
+/* Importa un font deciso da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 150px; /* Dimensione standard per schermi grandi */
+    /* font-weight: bold; */
+    text-align: center;
+    color: transparent; /* Rende il centro delle lettere trasparente */
+    -webkit-text-stroke: 2px rgb(255, 255, 255); /* Spessore del contorno bianco */
+    text-transform: uppercase; /* Forza il maiuscolo */
+    margin: 40px 0;
+    letter-spacing: 2px; /* Spaziatura tra le lettere */
+    margin-bottom: -12%;
+}
+
+/* Schermi piccoli (smartphone) */
+@media (max-width: 1000px) {
+    .section-title {
+        font-size: 70px;
+        -webkit-text-stroke: 1px white; /* Ulteriore riduzione per schermi piccoli */
+    }
+}
+
+/* Schermi medi (tablet) */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 36px;
+        -webkit-text-stroke: 1.5px white; /* Riduce lo spessore del contorno */
+    }
+}
+
+/* Schermi piccoli (smartphone) */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 350%;
+        -webkit-text-stroke: 1px white; /* Ulteriore riduzione per schermi piccoli */
+        margin-bottom: 8%;
+
+    }
+}

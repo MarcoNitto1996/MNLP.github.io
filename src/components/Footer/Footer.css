@@ -1,0 +1,197 @@
+/* Stile base del footer */
+.footer {
+    margin-top: -5%;
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+
+    background-color: #123266;
+
+}
+
+iframe{
+    border-radius: 3%;
+    width: 80%;
+}
+
+
+ul{
+    list-style: none;
+}
+
+li{
+ text-align: left;
+ margin:1%;
+ font-size: large;
+}
+
+i{
+    color: white;
+    transition: color 0.5s ease;
+}
+
+i:hover{
+    color:#112b4b;
+}
+
+.circular-button {
+    display: inline-block;
+    border: 2px solid #ffffff; /* Colore e spessore del contorno */
+    border-radius: 50%;      /* Rende il contorno circolare */
+    padding: 5px;           /* Aggiunge spazio interno */
+    text-align: center;      /* Centra il contenuto */
+    line-height: 1;          /* Allinea verticalmente l'icona */
+    cursor: pointer;         /* Indica che è cliccabile */
+    background-color: none;
+    transition: background-color 0.5s ease;
+
+  }
+
+  .circular-button:hover{
+    background-color: white;
+  }
+
+
+/* Prima sezione */
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Adattamento per schermi più piccoli */
+    margin-bottom: 20px;
+}
+
+/* Elementi della prima sezione */
+.footer-item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    max-width: 300px;
+    flex: 1; /* Adattamento della dimensione per spazi equi */
+}
+
+/* Immagine della prima sezione */
+.footer-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+/* Testo della prima sezione */
+.footer-item-text {
+    font-size: 1em;
+    color: #f1f1f1;
+    text-align: right;
+}
+
+/* Seconda sezione */
+.footer-bottom {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.margin{
+    margin-right: 50% !important;
+}
+
+
+/* Immagine della seconda sezione */
+.footer-bottom-image {
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    object-fit: contain;
+}
+
+/* Testo della seconda sezione */
+.footer-bottom-text {
+    font-size: 0.9em;
+    color: #ffffff;
+    text-align: center;
+
+}
+
+.footer-first-section-image{
+    font-size: 30px;
+}
+
+.footer-first-section-text{
+    font-size: 20px;
+}
+
+.paragraph-custom{
+    margin-left: -50%;
+}
+
+.al{
+    text-align: left;
+}
+
+.amb{
+    margin-bottom: 1% ;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+a:hover{
+    color: #21659E;
+}
+
+hr{
+   margin: 20px auto !important;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .footer-item {
+        flex: 1 1 100%; /* Gli elementi si dispongono in colonna */
+        max-width: none;
+    }
+
+    .footer-bottom-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .footer-item-text {
+        font-size: 0.8em;
+    }
+
+    .footer-bottom-image {
+        width: 65%;
+        height: 80px;
+    }
+
+    .footer-bottom-text {
+        font-size: 0.8em;
+    }
+
+    hr{
+        width: 100%;
+
+    }
+
+    .mt{
+        margin-top: 10%;
+    }
+
+    iframe{
+        width: 300px;
+        margin-left: 10%;
+    }
+
+}

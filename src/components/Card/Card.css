@@ -1,0 +1,134 @@
+.card {
+    width: 300px; /* Larghezza della card */
+    max-width: 100%; /* Assicura che non superi la larghezza del contenitore */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #2C2C2C !important;  /* Colore grigio antracite */
+    transition: transform 0.2s ease;
+    text-align: center;
+    margin: auto;
+    color: white;                /* Colore del testo bianco per contrasto */
+}
+
+/* Effetto hover per la card */
+.card:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
+    border-width: 5px;
+}
+
+/* Stile dell'immagine */
+.card-img {
+    margin: auto;
+    width: 50% !important;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Stili per il contenuto della card */
+.card-content {
+    padding: 16px;
+}
+
+/* Titolo della card */
+.card-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #ffffff !important;
+}
+.card-duration{
+    font-size: 1.5em;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Testo della card */
+.card-text {
+    font-size: 0.9em;
+    color: #ffffff !important;
+    margin: 8px 0 16px;
+}
+
+/* BOTTONE */
+
+
+.card-btn {
+    background-color: #112b4b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #003d80;
+}
+
+
+/* Effetto onda all'hover */
+.card-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Overlay per far sì che il testo resti in primo piano */
+.card-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* LISTA */
+
+/* Stili per la lista */
+.card-list {
+    list-style-type: none; /* Rimuove i pallini predefiniti */
+    padding: 0;
+    margin: 10px 0;
+}
+
+/* Stili per ogni elemento della lista */
+.card-list-item {
+    padding: 8px;
+   /*  background-color: #f7f7f7; */
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+
+/* PREZZO */
+
+.card-price-container {
+    display: flex;               /* Flexbox per allineare i prezzi */
+    align-items: center;         /* Allinea gli elementi al centro verticalmente */
+    justify-content: center;     /* Allinea gli elementi al centro orizzontalmente */
+    margin: 8px 0;              /* Spaziatura verticale */
+}
+
+.card-price {
+    font-size: 1.6em;           /* Dimensione più grande per il prezzo originale */
+    color: rgb(0, 195, 0);      /* Colore del prezzo originale (verde) */
+    margin-right: 10px;         /* Spazio tra il prezzo originale e il prezzo scontato */
+    text-decoration: none;       /* Rimuove il sottolineato */
+    padding-bottom: 6%;
+}
+
+.card-discounted-price {
+    font-size: 1.6em;                   /* Dimensione del testo per il prezzo scontato */
+    color: #ffffff;                     /* Colore del prezzo scontato (bianco) */
+    text-decoration: line-through;       /* Sottolineato per indicare che è scontato */
+    text-decoration-color: #ff0000;     /* Colore rosso per la sbarra che taglia il prezzo */
+    margin-right: 5px;                  /* Spazio tra il prezzo scontato e la percentuale */
+    margin-left: 5px;                   /* Spazio tra il prezzo scontato e la percentuale */
+}
+
+.discount-percentage {
+    font-size: 1em;             /* Dimensione del testo per la percentuale di sconto */
+    color: #ff0000;             /* Colore della percentuale (rosso) */
+    margin-left: -1%;  
+    margin-bottom: 2%;         /* Spazio per migliorare la distanza dal prezzo scontato */
+}
